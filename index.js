@@ -2,6 +2,8 @@ const fetchButton = document.getElementById("fetch-api");
 const textContent = document.getElementById("text-content");
 const adviceNumber = document.getElementById("advice-number");
 
+window.addEventListener("load", () => logMovies());
+
 async function logMovies() {
   const response = await fetch("https://api.adviceslip.com/advice");
   const movies = await response.json();
